@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import './styles/header.css'
 import BurguerButton from './BurguerButton'
 
 export const Header = () => {
@@ -22,9 +21,11 @@ export const Header = () => {
         </Link>
       </h2>
       <div className={`links ${clicked ? 'active' : ''}`}>
-        <a onClick={handleClick}><Link to="/user/login">Login</Link></a>
-        <a onClick={handleClick}><Link to="/">Purchases</Link></a>
-        <a onClick={handleClick}><Link to="/">Cart</Link></a>
+        <>
+          <a><Link to="/user/login">Login</Link></a>
+          <a><Link to="/">Purchases</Link></a>
+          <a><Link to="/">Cart</Link></a>
+        </>
       </div>
       <div className='burger'>
         <BurguerButton clicked={clicked} handleClick={handleClick}/>
@@ -40,14 +41,14 @@ const NavContainer = styled.nav`
     font-weight: 400 bold;
   }
   padding: 1rem;
-  background-color: #333;
+  background-color: #F85555;
   display: flex;
   align-items: center;
   justify-content: space-between;
   a{
     color: aliceblue;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
   }
   .links{
     position: absolute;
@@ -60,14 +61,14 @@ const NavContainer = styled.nav`
     transition: all .5s ease;
     a{
       color: aliceblue;
-      font-size: 1rem;
+      font-size: 1.2rem;
       display: block;
     }
     @media(min-width: 768px){
       position: initial;
       margin: 0;
       a{
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: aliceblue;
         display: inline;
       }
@@ -85,21 +86,21 @@ const NavContainer = styled.nav`
     margin-right: 70px;
     text-align: center;
     a{
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin-top: 1rem;
       color: aliceblue;
     }
   }
 
-  .burguer{
     @media(min-width: 768px){
-      display: none;
+      .burger{
+        display: none;
+      }
     }
-  }
 `
 
 const BgDiv = styled.div`
-  background-color: #222;
+  background-color: #f85555de;
   position: absolute;
   top: -1000px;
   left: -1000px;
@@ -108,10 +109,10 @@ const BgDiv = styled.div`
   z-index: -1;
   transition: all .6s ease;
   &.active{
-    border-radius: 0 0 65% 0;
+    border-radius: 0 0 50% 0;
     top: 0;
     left: 0;
     width: 50%;
-    height: 50%;
+    height: 60%;
   }
 `
