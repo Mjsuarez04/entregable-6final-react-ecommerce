@@ -1,0 +1,7 @@
+.similar__products {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}

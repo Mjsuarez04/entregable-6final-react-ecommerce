@@ -1,0 +1,7 @@
+.home__products {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}

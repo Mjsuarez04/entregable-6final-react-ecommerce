@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.header__logo {
+    color: #F85555;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.header__logo-link {
+    color: inherit;
+}
+
+.header__list {
+    width: 450px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.header__link {
+    color: #ee2d2d;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
