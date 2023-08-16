@@ -22,9 +22,9 @@ export const Header = () => {
       </h2>
       <div className={`links ${clicked ? 'active' : ''}`}>
         <>
-          <a><Link to="/user/login">Login</Link></a>
-          <a><Link to="/">Purchases</Link></a>
-          <a><Link to="/">Cart</Link></a>
+          <span><Link to="/user/login">Login</Link></span>
+          <span><Link to="/">Purchases</Link></span>
+          <span><Link to="/">Cart</Link></span>
         </>
       </div>
       <div className='burger'>
@@ -83,8 +83,7 @@ const NavContainer = styled.nav`
     margin-right: auto;
     top: 15%;
     left: -100px;
-    margin-right: 70px;
-    text-align: center;
+    margin-right: 150px;
     a{
       font-size: 1.2rem;
       margin-top: 1rem;
@@ -100,14 +99,14 @@ const NavContainer = styled.nav`
 `
 
 const BgDiv = styled.div`
-  background-color: #f85555de;
+  background-color: #f85555;
   position: absolute;
   top: -1000px;
-  left: -1000px;
-  width: 100%;
-  height: 100%;
+  left: -100%;
+  width: -100%;
+  height: 90%;
   z-index: -1;
-  transition: all .6s ease;
+  transition: all .5s ease;
   &.active{
     border-radius: 0 0 50% 0;
     top: 0;
